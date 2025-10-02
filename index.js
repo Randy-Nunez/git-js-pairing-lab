@@ -106,3 +106,35 @@ const getExtention = (filename) => {
     console.log(extention)
 }
 
+const absoluteNineteen = (num) => {
+    let absoluteValue = Math.abs(num - 19);
+    if (num < 19) {
+        return absoluteValue;
+    } else if (num > 19) {
+        return absoluteValue * 3;
+    }
+}
+
+const switchLetters = (string) => {
+    let firstCharacter = string[0];
+    let lastCharacter = string[string.length - 1];
+    let middleString = string.slice(1, -1);
+
+    return lastCharacter + middleString + firstCharacter;
+}
+
+const changeString = (string) => {
+    let lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    let upperCaseAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let newString = "";
+    for (let i = 0; i < string.length; i++) {
+        if (lowerCaseAlphabet.includes(string[i])) {
+            let alphabetIndex = lowerCaseAlphabet.indexOf(string[i]);
+            newString += lowerCaseAlphabet[(alphabetIndex + 1) % 26];
+        } else if (upperCaseAlphabet.includes(string[i])) {
+            let alphabetIndex = upperCaseAlphabet.indexOf(string[i]);
+            newString += upperCaseAlphabet[(alphabetIndex + 1) % 26];
+        }
+    }
+    return newString;
+}
