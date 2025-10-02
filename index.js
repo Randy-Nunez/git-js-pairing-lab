@@ -68,11 +68,43 @@ const largest = (num1, num2, num3) => {
     }
 }
 
-console.log(largest(2, 4, 1))
-console.log(betweenTwentyAndFourty(17))
-console.log(triangleArea(7, 4))
-console.log(isNegative(-2))
-console.log(add(7, 10))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const absoluteNineteen = (num) => {
     let absoluteValue = Math.abs(num - 19);
