@@ -68,8 +68,41 @@ const largest = (num1, num2, num3) => {
     }
 }
 
-console.log(largest(2, 4, 1))
-console.log(betweenTwentyAndFourty(17))
-console.log(triangleArea(7, 4))
-console.log(isNegative(-2))
-console.log(add(7, 10))
+const printTime = () => {
+    let date = new Date()
+    let hrs = date.getHours()
+    let mins = date.getMinutes()
+    let secs = date.getSeconds()
+    console.log(`${hrs - 12}:${mins}:${secs}`)
+}
+
+const isLeapYear = (year) => {
+    let endCentury = false
+    if (year % 100 == 0) {
+        endCentury = true
+    }
+
+    if (endCentury = true) {
+        if (year % 400 == 0) {
+            return true
+        } else {
+            return false
+        }
+    } else {
+        if (year % 4 == 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+
+console.log(isLeapYear(1900))
+
+const getExtention = (filename) => {
+    let index = filename.indexOf(".")
+    let extention = filename.slice(index, filename.length)
+
+    console.log(extention)
+}
+
